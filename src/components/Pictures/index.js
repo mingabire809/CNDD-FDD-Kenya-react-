@@ -30,7 +30,7 @@ const Images = () => (
         <SimpleImageSlider width={1300}
         height={704} showBullets={true}
         showNavs={false} slideDuration={2} autoPlay={true}
-        images={Image1} style={{}}
+        images={Image1} 
         />
         
         </Content>

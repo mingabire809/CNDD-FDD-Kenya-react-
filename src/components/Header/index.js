@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
 import { Dropdown, Icon, DropdownMenu } from 'semantic-ui-react'
 import flagLogo from '../../images/Flag_of_the_CNDD-FDD.svg.png'
@@ -23,7 +24,9 @@ export default function Header  ()  {
         <Content>
             
             <FlagLogoImg src={flagLogo} all = 'flag-logo'/>
+            <Link to='/'>
             <Text>CNDD-FDD Section Kenya</Text>
+            </Link>
             <LogoImg src={Logo} all = 'logo'/>
             
         </Content>

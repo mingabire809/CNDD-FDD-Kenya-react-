@@ -20,15 +20,17 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: green;
+    background-color: lightgreen;
     max-width: var(--maxWidth);
     height: 20px;
     padding: 30px 0;
     margin: 0 auto;
+    
 `;
 export const Content2 = styled.div`
     display: flex;
     align-items: center;
+    object-position: 100%;
     justify-content: left;
     background-color: lightgray;
     max-width: var(--maxWidth);
@@ -36,26 +38,15 @@ export const Content2 = styled.div`
     padding: 10px 0;
     margin: 0 auto;
     flex: 1;
-    .is-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
-    background-color: #ffffff !important;
-    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
 @media(max-width:540px){
-  
+     object-fit: cover;
     display: contents;
     padding: 10px 0;
     margin: 0 auto;
     
     
 }
+
 `;
 
 
@@ -72,7 +63,7 @@ export const Text = styled.h3`
     
 `;
 export const Text2 = styled.h5`
-    display: flex;
+    
     align-items: center;
     color: black;
     justify-content: center;
@@ -132,7 +123,7 @@ export const InstagramImg = styled.img`
 }
 `
 export const Text3 = styled.h5`
-    display: flex;
+    
     align-items: center;
     color: black;
     justify-content: center;

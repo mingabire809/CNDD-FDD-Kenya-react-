@@ -10,6 +10,7 @@ import Thumb from '../Thumb';
 import { Axios } from "axios";
 import { useState, useEffect, useCallback } from "react";
 import { Wrapper2, Content2, Text,Div,Wrapper, Content, Image} from "../Articles/Articles.styles";
+import { Link } from "react-router-dom";
 
 export default function Article() {
     
@@ -32,6 +33,7 @@ export default function Article() {
     });
    // sendGet();
    const [articles, setArticles] = useState([])
+   const datas = articles.slice(0,6);
    const fetchData = () => {
     fetch("http://127.0.0.1:8000/activity/activity/")
       .then(response => {
@@ -55,9 +57,9 @@ export default function Article() {
         
             
             
-            {articles.length > 0 && (
+            {datas.length > 0 && (
         <>
-          {articles.map(article => (
+          {datas.map(article => (
 
               <Content>
 
@@ -76,6 +78,9 @@ export default function Article() {
             
             </Content>
           ))}
+          <Link to='/all-articles'>
+          <h5>See all the activities</h5>
+          </Link>
         </>
       )}
             
