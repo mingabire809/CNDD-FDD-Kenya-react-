@@ -6,7 +6,7 @@ export const Wrapper = styled.footer`
    bottom: 0;
    width: 100%;
    
-   margin-top: 30px;
+   margin-top: auto;
    @media(max-width:540px){
   
   width: max-content;
@@ -43,6 +43,8 @@ export const Content2 = styled.div`
   width: 100%;
   height: 40px;
   display: flex;
+
+  
 `;
 
 export const FlagLogoImg = styled.img`

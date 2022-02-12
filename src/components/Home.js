@@ -1,4 +1,5 @@
 import React from 'react';
+import Spinner from "./Spinner";
 import Images from './Pictures';
 import Article from './Articles';
 

@@ -8,6 +8,7 @@ import Kenya from '../../images/Kenya.jpeg';
 import Daystar from '../../images/Daystar.jpeg'
 import Thumb from '../Thumb';
 import { Axios } from "axios";
+import Spinner from "../Spinner";
 import { useState, useEffect, useCallback } from "react";
 import { Wrapper2, Content2, Text,Div,Wrapper, Content, Image} from "../Articles/Articles.styles";
 import { Link } from "react-router-dom";
@@ -34,13 +35,16 @@ export default function Article() {
    // sendGet();
    const [articles, setArticles] = useState([])
    const datas = articles.slice(0,6);
+   const [loading, setLoading] = useState(false);
    const fetchData = () => {
+    setLoading(true);
     fetch("http://127.0.0.1:8000/activity/activity/")
       .then(response => {
         return response.json()
       })
       .then(data => {
-        setArticles(data)
+        setArticles(data);
+        setLoading(false)
       })
   }
   useEffect(() => {
@@ -51,13 +55,13 @@ export default function Article() {
 
       <>
         <h1>Recent Activity</h1>
-
+      
         <Wrapper>
 
         
             
             
-            {datas.length > 0 && (
+            {datas.length > 0 ? (
         <>
           {datas.map(article => (
 
@@ -82,7 +86,7 @@ export default function Article() {
           <h5>See all the activities</h5>
           </Link>
         </>
-      )}
+      ): <Spinner/>}
             
             
             

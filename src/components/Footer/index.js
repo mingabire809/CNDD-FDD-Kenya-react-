@@ -2,6 +2,8 @@ import React from "react";
 import {P ,Wrapper, Content1, Content2, FlagLogoImg, BottomFooterContent, DaystarLogo} from "./Footer.styles";
 import Logo from '../../images/logo.png'
 import daystarlogo from "../../images/daystarlogo.jpg";
+import { Link } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const Footer = () => (
     <Wrapper>
@@ -13,8 +15,12 @@ const Footer = () => (
             </div>
             <div>
                 <h2>Lien utiles</h2>
-                <h4>cndd-fdd.org</h4>
-                <h4>CNDD-FDD Section Russie</h4>
+                <div>
+                <a href='https://cndd-fdd.org/'>cndd-fdd.org</a>
+                </div>
+                <div>
+                <a href='https://cnddfdd-russia.ru/'>CNDD-FDD Section Russie</a>
+                </div>
             </div>
         </Content1>
          

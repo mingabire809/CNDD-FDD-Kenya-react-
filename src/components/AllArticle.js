@@ -8,15 +8,17 @@ const AllArticles = () =>{
 
     const [articles, setArticles] = useState([])
 
-   const [loading, setLoading] = useState(true);
+   const [loading, setLoading] = useState(false);
     
     const fetchData = () => {
+      setLoading(true);
      fetch("http://127.0.0.1:8000/activity/activity/")
        .then(response => {
          return response.json()
        })
        .then(data => {
-         setArticles(data)
+         setArticles(data);
+         setLoading(false)
        })
    }
    useEffect(() => {
@@ -28,12 +30,13 @@ const AllArticles = () =>{
    return (
        <>
        <h2>All Activities</h2>
+       
     <Wrapper>
 
         
             
             
-    {articles.length > 0 && (
+    {articles.length > 0 ? (
 <>
   {articles.map(article => (
 
@@ -57,7 +60,7 @@ const AllArticles = () =>{
   ))}
   
 </>
-)}
+): <Spinner/>}
     
     
     

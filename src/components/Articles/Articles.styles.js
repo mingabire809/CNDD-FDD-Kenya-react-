@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
     margin: 0 auto;
     padding: 0 20px;
     justify-content: center;
-
+    position: relative;
+    min-height: 50vh;
     display: flex;
     flex-wrap:wrap;
 
