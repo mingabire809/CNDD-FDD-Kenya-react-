@@ -27,6 +27,7 @@ export default function Header  ()  {
             <Link to='/'>
             <Text>CNDD-FDD Section Kenya</Text>
             </Link>
+            
             <LogoImg src={Logo} all = 'logo'/>
             
         </Content>
@@ -52,9 +53,14 @@ export default function Header  ()  {
           <Text2>I'll appear when you hover over the buttons.</Text2>
           <Text2>I'll appear when you hover over the buttons.</Text2>
         </Div>
-      )}
-            <Text3>Events</Text3>
+      )}    
+            <select class='select'>
+              <option disabled selected>Events</option>
+              <option value='upcoming'>Upcoming</option>
+              <option value='past'>Past</option>
+            </select>
             <Text3>About</Text3>
+            
         </Content2>
         
     </Wrapper>);

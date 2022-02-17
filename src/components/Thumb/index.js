@@ -1,19 +1,25 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 //styles
 import { Image } from "./Thumb.styles";
 
-const Thumb = ({image, movieId, clickable}) =>(
+const Thumb = ({image, id, title,clickable, date}) =>(
     <div>
+        {clickable ? (
+            <Link to={`/${image}`}>
+                <Image src={image} alt='article-thumb'/>
+            </Link>
+        ) : (
+            <Image src={image} alt='article-thumb'/>
+        )}
+        <h2>{title}</h2>
+        <h5>Date of publication: {date}</h5>
+        {clickable ? (<Link to={`/${id}`}>
+        <h5>Read article</h5>
+        </Link>): (<h5>Read article</h5>)}
         
-           
-                <Image src={image} alt='grid-thumb'/>
-           
         
-           
-       
     </div>
 );
-
 
 export default Thumb;

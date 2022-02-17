@@ -13,6 +13,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Wrapper2, Content2, Text,Div,Wrapper, Content, Image} from "../Articles/Articles.styles";
 import { Link } from "react-router-dom";
 
+
 export default function Article() {
     
     const  [isBigger, setIsBigger] = useState(false);
@@ -66,12 +67,23 @@ export default function Article() {
           {datas.map(article => (
 
               <Content>
-
+                  <Thumb 
+                    key={article.id} 
+                    clickable 
+                    image={
+                        article.picture 
+                        
+                        
+                    }
+                    title={article.title}
+                    date={article.date}
+                    id={article.id}
+                    /> 
                 <div>
 
-                    <Image src={article.picture} alt='image'/> 
+                  {/* <Image src={article.picture} alt='image'/> 
                   <h2>{article.title}</h2>
-                  <h5>Date of publication: {article.date}</h5>
+                  <h5>Date of publication: {article.date}</h5>*/}  
 
 
             </div>

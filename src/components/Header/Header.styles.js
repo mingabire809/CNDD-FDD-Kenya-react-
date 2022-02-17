@@ -12,7 +12,10 @@ export const Wrapper = styled.div`
   padding: 10px 0;
   margin: 0 auto;
   
-  
+  @media screen and (max-width: 540px){
+       width: 100%;
+    }
+
 }
 `;
 
@@ -46,6 +49,32 @@ export const Content2 = styled.div`
     
     
 }
+.select{
+    padding: 4px 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    width: 80px;
+
+    /*Arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+}
+.select:focus{
+        min-width: 150px;
+        width: auto;
+        font-weight: bold;
+    }
+.select:hover {
+    outline: none;
+}
+.option{
+    background: white;
+}
+
+
 
 `;
 
@@ -129,6 +158,7 @@ export const Text3 = styled.h5`
     justify-content: center;
     padding-left: 150px;
     flex: 1;
+    cursor: pointer;
     
 
     @media screen and (max-width: 500px){

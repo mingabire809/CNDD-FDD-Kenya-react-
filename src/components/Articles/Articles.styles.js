@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     padding: 0 20px;
     justify-content: center;
     position: relative;
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
     flex-wrap:wrap;
 
