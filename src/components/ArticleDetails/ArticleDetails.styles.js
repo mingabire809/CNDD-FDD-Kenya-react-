@@ -29,7 +29,7 @@ export const Content = styled.div`
     width: 100%;
     margin: 0 auto;
     border-radius: 20px;
-    
+  
     
     @media screen and (max-width: 768px){
         display: block;
@@ -51,7 +51,12 @@ export const Text = styled.div`
     padding: 20px 40px;
     color: var(--white);
     overflow: hidden;
-
+    .pre{
+        text-align: center;
+        flex-direction: 'column';
+        white-space: pre-line;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
     .rating-directors {
         display: flex;
         justify-content: flex-start;
@@ -85,4 +90,13 @@ export const Text = styled.div`
         }
     }
 
+`;
+export const Control = styled.div`
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+margin-left: 150px;
+
+.h3{
+    cursor: pointer;
+}
 `;
