@@ -25,7 +25,13 @@ export const Content1 = styled.div`
     width: 100%;
     height: fit-content;
 
-    
+    a{
+      transition: 0.3s;
+    :hover{
+       font-size: larger;
+        color: red;
+    }
+    }
     
     @media(max-width:540px){
   display: block;

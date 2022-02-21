@@ -24,3 +24,10 @@ export const Image = styled.img`
         
     }
 `;
+
+export const H5 = styled.h5`
+    transition: 0.3s;
+    :hover{
+        color: red;
+    }
+`;

@@ -53,9 +53,9 @@ return(
     <Text>
         <h1>{article.title}</h1>
         <h4>{article.date}</h4>
-        <p><pre>{article.content}</pre></p>
+        
     </Text>
-    
+    <p>{article.content}</p>
     </Content>
     ))}
 </Wrapper>

@@ -41,6 +41,7 @@ export const Content2 = styled.div`
     padding: 10px 0;
     margin: 0 auto;
     flex: 1;
+   
 @media(max-width:540px){
      object-fit: cover;
     display: contents;
@@ -68,7 +69,10 @@ export const Content2 = styled.div`
         font-weight: bold;
     }
 .select:hover {
+    transition: 0.3s;
     outline: none;
+    text-decoration: underline;
+    
 }
 .option{
     background: white;
@@ -84,6 +88,11 @@ export const Text = styled.h3`
     align-items: center;
     color: black;
     justify-content: center;
+    transition: 0.3s;
+    :hover{
+        transform: scale(1.2);
+        color: red;
+    }
 
     @media screen and (max-width: 500px){
     font-size: small;
@@ -124,7 +133,11 @@ export const FacebookImg = styled.img`
  width: 20px;
  height: 20px;
  padding-left: 10px;
- 
+ cursor: pointer;
+ transition: 0.3s;
+ :hover{
+    transform: scale(2);
+ }
 
 @media screen and (max-width: 500px){
     width: 20px;
@@ -135,6 +148,11 @@ export const TwitterImg = styled.img`
  width: 20px;
  height: 20px;
  padding-left: 10px;
+ cursor: pointer;
+ transition: 0.3s;
+ :hover{
+    transform: scale(2);
+ }
 
 @media screen and (max-width: 500px){
     width: 20px;
@@ -146,6 +164,11 @@ export const InstagramImg = styled.img`
  height: 20px;
  padding-left: 10px;
  padding-right: 70px;
+ transition: 0.3s;
+ cursor: pointer;
+ :hover{
+    transform: scale(2);
+ }
 
 @media screen and (max-width: 500px){
     width: 20px;
@@ -158,8 +181,16 @@ export const Text3 = styled.h5`
     justify-content: center;
     padding-left: 150px;
     flex: 1;
+    transition: 0.3s;
     cursor: pointer;
-    
+    :hover{
+        color: white;
+        text-decoration: underline green ;
+        font-size: larger;
+        
+        
+        
+    }
 
     @media screen and (max-width: 500px){
     width: 80px;
@@ -191,6 +222,9 @@ export const Div1 = styled.div`
     .dropdown {
   position: relative;
   display: inline-block;
+  :hover dropdown-content {
+  display: block;
+}
 }
 
 .dropdown-content {
@@ -203,7 +237,5 @@ export const Div1 = styled.div`
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+
 `;

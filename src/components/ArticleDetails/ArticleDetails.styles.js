@@ -30,6 +30,20 @@ export const Content = styled.div`
     margin: 0 auto;
     border-radius: 20px;
   
+
+    p{
+            
+            margin-left: 20px;
+            flex:1;
+            flex-wrap: wrap;
+            flex-shrink: 1;
+            text-indent: 50px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            width: 1200px;
+            line-height: 35pt;
+        }
     
     @media screen and (max-width: 768px){
         display: block;
@@ -75,14 +89,10 @@ export const Text = styled.div`
         margin: 0;
     }
 
-    .director {
-        margin: 0 0 0 40px;
+    
 
-        p{
-            margin: 0;
-        }
 
-    }
+    
 
     h1{
         @media screen and (max-width: 768px){
@@ -96,7 +106,12 @@ display: grid;
 grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 margin-left: 150px;
 
-.h3{
+h3{
     cursor: pointer;
+    transition: 0.3s;
+    :hover{
+        text-decoration: underline;
+        color: lightgreen;
+    }
 }
 `;
